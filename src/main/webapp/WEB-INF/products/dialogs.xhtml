@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: 1
+  Date: 10.02.2018
+  Time: 12:42
+-->
+
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <p:dialog id="delete_dailog" widgetVar="delete_dialog">
+        <p:commandButton value="Удалить"
+                         action="#{productsListBean.deleteProduct()}"
+                         update="products_table"
+                         oncomplete="PF('delete_dialog').hide();"/>
+
+        <p:commandButton value="Отмена"
+                         onclick="PF('delete_dialog').hide();"/>
+    </p:dialog>
+
+
+</ui:composition>

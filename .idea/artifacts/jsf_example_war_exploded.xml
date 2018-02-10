@@ -8,6 +8,8 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.faces:jsf-impl:1.2-20" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:5.3" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.0.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

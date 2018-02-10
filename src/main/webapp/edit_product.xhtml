@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: 1
+  Date: 10.02.2018
+  Time: 16:14
+-->
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="WEB-INF/template.xhtml">
+        <ui:define name="page_title"></ui:define>
+
+    <ui:define name="page_body">
+        <h:form>
+    <p:panel id="edit_dialog" widgetVar="edit_dialog">
+        <p:panel>
+            <p:outputLabel for="product_name" value="наименование"/>
+            <br/>
+            <h:inputText id="product_name" value="#{productsListBean.editingProduct.name}"/>
+            <br/>
+            <p:outputLabel for="product_price" value="цена"/>
+            <br/>
+            <h:inputText id="product_price" value="#{productsListBean.editingProduct.price}"/>
+        </p:panel>
+
+        <p:panel>
+            <p:commandButton value="Сохранить"
+                             action="#{productsListBean.saveProducts()}"
+                             oncomplete="window.location = 'products.xhtml'"/>
+            <p:commandButton value="Отмена" onclick="window.location = 'products.xhtml'"/>
+            </p:panel>
+        </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>
